@@ -42,7 +42,6 @@ end
         filename = NameValueArgs.filename;
     end
     
-    figure;
     for year=min_year:max_year
         year_data = data(data.date.Year == year, :);
         year_avg_temp = yearly_avg_temp(yearly_avg_temp.date.Year==year, :).tmid;
@@ -57,7 +56,7 @@ end
     
         % make all years the same for plotting so they fall in the same axis range, the choice of year here is arbitrary
         year_data.date.Year(:) = max_year;
-        p = plot(year_data.date,year_data.tmid, 'Color', color, 'LineWidth',1); hold on
+        p = plot(gca, year_data.date,year_data.tmid, 'Color', color, 'LineWidth',1); hold on
         xtickformat("MM")
         set(gca, 'XTickLabel', monthNames);
         set(gca, 'ylim', [-30 40]);

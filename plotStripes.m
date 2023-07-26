@@ -18,7 +18,7 @@ end
     tmin_mean_1971_2000 = mean(tt(averaging_timerange, :).tmin);
     tmax_mean_1971_2000 = mean(tt(averaging_timerange, :).tmax);
 
-    figure;
+    % figure;
     max_temp = max(tt.tmid);
     min_temp = min(tt.tmid);
     
@@ -40,7 +40,7 @@ end
             height = 1;
         end
     
-        bar(tt.date.Year(i), height, 'FaceColor',color,'EdgeColor',color,'LineStyle',"none", 'BarWidth', 1);hold on
+        bar(gca, tt.date.Year(i), height, 'FaceColor',color,'EdgeColor',color,'LineStyle',"none", 'BarWidth', 1);hold on
         set(gca,'XTickLabel',[]);
         set(gca,'YTickLabel',[]);
         set(gca,'XTick',[])
