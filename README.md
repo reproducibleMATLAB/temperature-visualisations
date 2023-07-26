@@ -2,6 +2,8 @@
 
 ![](boston-stripes.png)
 
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=reproducibleMATLAB/temperature-visualisations&project=temperature_visualisations.prj&file=temperature_visualisations.mlx)
+
 This repo contains some simple visualisations of surface temperature data with MATLAB for you to run.
 
 The goal is to demonstrate a reasonably reproducible project with some interesting data.
@@ -10,21 +12,23 @@ The data source used is ["Compiled historical daily temperature and precipitatio
 
 ## Dependencies
 This project requires:
-* MATLAB
-*
++ MATLAB
++ [MATLAB Financial Toolbox](https://uk.mathworks.com/products/finance.html) (we use some handy date based analyses)
+
+(Note: if you're using MATLAB online, you shouldn't have to think about dependencies.)
 
 ## How to use this repo
 The repo consists of:
 
 + a livescript (`temperature_visualisation.mlx`) which shows how to use the code to obtain and visualise the data,
-+ a MATLAB project file (`.prj`) used to set up the path before running,
++ a MATLAB project file (`temperature_visualisations.prj`) used to set up the path before running,
 + a number of source code files located in the `src` directory.
 
 ### via MATLAB Online
 
 MATLAB Online is a license-free way to run MATLAB projects like this one in the cloud.
 
-[Open this project in MATLAB Online]
+[Open this project in MATLAB Online](https://matlab.mathworks.com/open/github/v1?repo=reproducibleMATLAB/temperature-visualisations&project=temperature_visualisations.prj&file=temperature_visualisations.mlx)
 
 Once you're up and running, the livescript `temperature_visualisation.mlx` should open up (open it if not), you can then step through section by section. Have fun!
 
@@ -34,7 +38,7 @@ First, get the code with one of the following options:
 + **With git** (recommended): Clone this repository either from the command line (`git clone https://github.com/reproducibleMATLAB/temperature-visualisations.git`) or [using MATLAB's git integration](https://uk.mathworks.com/help/simulink/ug/clone-git-repository.html). Open the folder up in MATLAB.
 + **Without git**: From the [repository's GitHub page](https://github.com/reproducibleMATLAB/temperature-visualisations), under the green `Code` button, select `Download ZIP` to download a zip file of the code. Unzip it somewhere useful and open the folder up in MATLAB.
 
-Run the project file to ensure that all the source code is on the PATH and all the dependencies are installed.
+Run the project file `temperature_visualisation.prj` to ensure that all the source code is on the PATH and all the dependencies are installed.
 
 Once you're up and running, open the livescript `temperature_visualisation.mlx`, you can then step through section by section. Have fun!
 
