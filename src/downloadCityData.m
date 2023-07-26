@@ -32,7 +32,7 @@ end
         city_info_table = readtable(NameValueArgs.city_info_file);
     else
         city_info_filename = fullfile(NameValueArgs.data_dir,'city_info.csv');
-        websave(city_info_filename, file_url, options);
+        websave(city_info_filename, "https://ndownloader.figshare.com/files/32874371", websave_options);
         city_info_table = readtable(city_info_filename);
     end
     
