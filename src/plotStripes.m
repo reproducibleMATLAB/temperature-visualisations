@@ -1,5 +1,21 @@
 function plotStripes(data, NameValueArgs)
-
+% PLOTSTRIPES plots a temperature timeseries as an series of stripes
+% of yearly temperatures with one stripe per year. Lines are colour
+% coded blue-white-red from cooler to hotter temperatures normalised
+% against the average temperature in the range 1971-2000 as https://showyourstripes.info/faq
+% 
+% plotStripes(data) plots the timeseries in data
+% plotStripes(data, "plotBarHeights", true) plots with bar heights shown
+% 
+% Inputs
+% data (table) - table containing a timeseries of temperature data with
+% columns: date, tmin, tmax
+% 
+% Name-Value arguments
+% "plotBarHeights" - logical (true or false) sets whether to show heights
+% of bars
+% 
+% 
 
 arguments
     data table

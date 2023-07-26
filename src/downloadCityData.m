@@ -1,9 +1,19 @@
+function downloadCityData(NameValueArgs)
 %DOWNLOADCITYDATA Downloads a data file over HTTP. By default a file from the dataset:
 % "Compiled historical daily temperature and precipitation data for
 % selected 210 U.S. cities" at https://kilthub.cmu.edu/articles/dataset/Compiled_daily_temperature_and_precipitation_data_for_the_U_S_cities/7890488
 % 
-%
-function downloadCityData(NameValueArgs)
+% downloadCityData("city", "Boston") downloads the temperature timeseries
+% data for Boston from the dataset.
+% downloadCityData("city", "Boston", "data_dir", fullfile(pwd, "data"))
+% downloads the data to the location fullfile(pwd, "data") (this is also
+% the default location)
+% downloadCityData("city", "Boston", "city_info_file", "city_info.csv")
+% uses the file city_info.csv which relates the city names to their
+% download URLS, if this file is not provided, the file is downloaded from
+% the dataset first.
+% 
+% 
 
 arguments
     NameValueArgs.city string {mustBeTextScalar} = "Milton"

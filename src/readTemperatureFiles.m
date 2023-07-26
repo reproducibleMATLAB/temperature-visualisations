@@ -1,7 +1,13 @@
 function [cleaned_data] = readTemperatureFiles(path)
-%READTEMPERATUREFILES Reads in temperature & precipitation text files as a table.
+% READTEMPERATUREFILES Reads in temperature & precipitation text files as a table.
 % Multiple files can be passed in as arguments and are concatendated
 % together in the order that they are provided.
+% 
+% cleaned_data = readTemperatureFiles(path) reads in a csv file from path,
+% expecting at least 3 columns: date, tmin, tmax. Other columns are
+% ignored. NaN values are removed and temperatures in Fahrenheit are
+% converted to Celsius.
+% 
 
 arguments (Repeating)
     path {mustBeFile}

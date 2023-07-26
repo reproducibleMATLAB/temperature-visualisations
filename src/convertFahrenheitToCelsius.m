@@ -1,7 +1,8 @@
 function [temp_c] = convertFahrenheitToCelsius(temp_f)
 %FAHRENHEIT_TO_CELSIUS Converts a value in fahrenheit to celsius
 
-% temp_f can be a numeric value or numeric vector
+% c = convertFahrenheitToCelsius(f) takes the numeric value or numeric
+% vector `f` in Fahrenheit and returns `c` in Celsius.
 
 arguments
     temp_f {mustBeNumeric}

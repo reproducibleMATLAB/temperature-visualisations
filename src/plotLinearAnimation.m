@@ -1,4 +1,30 @@
 function plotLinearAnimation(data, NameValueArgs)
+% PLOTLINEARANIMATION plots a temperature timeseries as an animated line
+% graph of yearly temperatures with one frame per year. Lines are colour
+% coded blue-white-red from cooler to hotter temperatures normalised
+% against the average temperature in the range 1971-2000 as https://showyourstripes.info/faq
+% 
+% plotLinearAnimation(data) plots the timeseries in data
+% plotLinearAnimation(data, "cityName", "Boston") plots and saves a gif as
+% "temperature_linear_plot_Boston.gif"
+% plotLinearAnimation(data, "saveGif", false) plots without saving image
+% file
+% plotLinearAnimation(data, "filename", "example.gif") plots and saves the
+% image as "example.gif"
+% 
+% Inputs
+% data (table) - table containing a timeseries of temperature data with
+% columns: date, tmin, tmax
+% 
+% Name-Value arguments
+% "cityName" - string or char array containing a name of the city the data
+% is for
+% "saveGif" - logical specifying whether or not to save the gif file.
+% "filename" - specify the full file path for the gif to be saved at, if a
+% "cityName" is specified, this will be used to set the filename in
+% preference over "filename"
+% 
+% 
 
 arguments
     data table
